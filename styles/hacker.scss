@@ -1,0 +1,62 @@
+$black: #0b0b0b;
+$gray: #233333;
+$transparent: #00000000;
+$white:#C5C6C7;
+$dark_neon: #228899;
+$light_neon: #70ffff;
+
+
+body{
+  margin: 0;
+  padding: 0;
+  color: $white;
+  background: $black;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header{
+  width: 100%;
+  border-bottom: 1px dashed $light_neon;
+  padding: 20px 0;
+  margin: 0 0 40px 0;
+}
+
+.btn {
+  background-color: $transparent;
+  border: 2px solid $dark_neon;
+  color: $white;
+  font-size: 13px;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.8s;
+  cursor: pointer;
+  margin: 4px 2px;
+}
+
+.btn:hover {
+  background-color: $dark_neon;
+  color: $white;
+}
+
+h1, h2, h3{
+  color: $light_neon;
+}
+
+a{
+  color: $dark_neon
+}
+
+#skip{
+  display: none;
+}
+
