@@ -1,0 +1,339 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+/* colors */
+/* font-sizes */
+/* font-families */
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+/* Box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: #c5c6c7;
+  background-color: #0a0b0c;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+/* general */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+/* colors */
+.bg-black {
+  background-color: #0a0b0c;
+}
+
+.bg-neon {
+  background-color: #66fcf1;
+}
+
+.bg-white {
+  background-color: #c5c6c7;
+}
+
+.text-black {
+  color: #0a0b0c;
+}
+
+.text-neon {
+  color: #66fcf1;
+}
+
+.text-white {
+  color: #c5c6c7;
+}
+
+/* typography */
+.ff-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 3.1px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.underline {
+  border-bottom: 1px dashed #66fcf1;
+}
+
+.fs-900 {
+  font-size: 9rem;
+}
+
+.fs-800 {
+  font-size: 5.5625rem;
+}
+
+.fs-700 {
+  font-size: 3.5rem;
+}
+
+.fs-600 {
+  font-size: 2.125rem;
+}
+
+.fs-500 {
+  font-size: 1.3125rem;
+}
+
+.fs-400 {
+  font-size: 1.125rem;
+}
+
+.fs-300 {
+  font-size: 0.8125rem;
+}
+
+.fs-200 {
+  font-size: 0.5rem;
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+/* ------------------- */
+/* Components         */
+/* ------------------- */
+.btn {
+  background-color: #0a0b0c;
+  color: #c5c6c7;
+  border: 2px solid #66fcf1;
+  padding: 0.525rem 1.75rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #66fcf1;
+  color: #0a0b0c;
+  border-radius: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #66fcf1;
+}
+
+h1 {
+  font-size: 9rem;
+}
+
+h2 {
+  font-size: 5.5625rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 2.125rem;
+}
+
+h5 {
+  font-size: 1.3125rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #c5c6c7;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #0a0b0c;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+nav li a:hover,
+nav li a:focus {
+  border-bottom: 1px solid #66fcf1;
+}
+
+input {
+  border: 2px solid #c5c6c7;
+  background-color: #0a0b0c;
+}
+
+a {
+  text-decoration: none;
+  font-style: italic;
+  color: rgba(102, 252, 241, 0.7);
+}
+
+#skip {
+  padding: 0.5rem 1.5rem;
+  position: absolute;
+  border-radius: 0.25rem;
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  -webkit-transition: -webkit-transform 400ms ease-in;
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  left: 2rem;
+}
+
+#skip:focus {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* ------------------- */
+/* Others              */
+/* ------------------- */
+.title {
+  text-align: center;
+  position: relative;
+  bottom: 12rem;
+}
+/*# sourceMappingURL=index.css.map */
