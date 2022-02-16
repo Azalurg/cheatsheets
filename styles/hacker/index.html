@@ -20,7 +20,7 @@
     <div class="container">
         <nav class="underline bg-black" style="position: sticky; top: 0;">
             <ul>
-                <li><a href="#" class="uppercase ">Menu</a></li>
+                <li><a href="#" class="uppercase">Menu</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Program</a></li>
                 <li><a href="#">Contact</a></li>
@@ -28,12 +28,12 @@
             </ul>
         </nav>
         <header>
-            <img style="width: 100%;"
+            <img style="width: 100%; margin-top: 6rem;"
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fget.pxhere.com%2Fphoto%2Fhand-person-light-black-and-white-people-white-sport-photography-dark-male-shadow-training-darkness-box-black-monochrome-arm-muscle-boxer-fight-boxing-men-singing-guitarist-entertainment-kickboxing-sense-in-black-monochrome-photography-film-noir-computer-wallpaper-580288.jpg&f=1&nofb=1"
                 alt="Backgroun">
             <h1 class="title">BOX GYM</h1>
         </header>
-        <main id="content">
+        <main id="content" style="margin-top: -6rem; margin-bottom: 3rem">
             <div id="photo-galery" style="align-items: center; justify-content: space-between;" class="flex">
                 <div style="width: 21rem;" class="flow">
                     <h4 style="text-align: center;">Sparings</h4>
@@ -84,24 +84,28 @@
 
         </main>
         <footer style="margin-bottom: 10vh">
-            <form class="grid" id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-                <div class="row">
-                    <label class="required" for="name">Your name:</label><br />
-                    <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-                    <span id="name_validation" class="error_message"></span>
+            <form class="flex" style="justify-content: center" id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                <div>
+                    <div class="row">
+                        <label class="required" for="name">Your name:</label><br />
+                        <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                        <span id="name_validation" class="error_message"></span>
+                    </div>
+                    <div class="row">
+                        <label class="required" for="email">Your email:</label><br />
+                        <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                        <span id="email_validation" class="error_message"></span>
+                    </div>
                 </div>
-                <div class="row">
-                    <label class="required" for="email">Your email:</label><br />
-                    <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-                    <span id="email_validation" class="error_message"></span>
-                </div>
-                <div class="row">
-                    <label class="required" for="message">Your message:</label><br />
-                    <textarea id="message" style="border: 2px solid white"class="input bg-black" name="message" rows="7" cols="30"></textarea><br />
-                    <span id="message_validation" class="error_message"></span>
-                </div>
+                <div>
+                    <div class="row">
+                        <label class="required" for="message">Your message:</label><br />
+                        <textarea id="message" style="border: 2px solid #c5c6c7"class="input bg-black" name="message" rows="7" cols="30"></textarea><br />
+                        <span id="message_validation" class="error_message"></span>
+                    </div>
 
-                <input class="btn" id="submit_button" type="submit" value="Send email" />
+                    <input class="btn" id="submit_button" type="submit" value="Send email" />
+                </div>
             </form>
         </footer>
     </div>
